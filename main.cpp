@@ -12,7 +12,7 @@ int main() {
     int escolha;
     int contador = 0;
 
-    cout << "=== Cadastro de Funcionarios (máximo 10) ===\n";
+    cout << "Cadastro de Funcionarios (máximo 10)\n";
 
     while (contador < 10) {
         cout << "\nEscolha o tipo de funcionario:\n";
@@ -69,7 +69,6 @@ int main() {
         contador++;
     }
 
-    cout << "\n=== Relatorio de Funcionarios ===\n";
     for (Funcionario* f : funcionarios) {
         f->exibirInformacoes();
     }
