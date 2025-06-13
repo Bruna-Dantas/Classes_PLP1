@@ -13,15 +13,23 @@ int main() {
     int contador = 0;
 
     while (contador < 10) {
+
         cout << "\nEscolha o tipo de Funcionário:\n";
         cout << "1 - Desenvolvedor\n";
         cout << "2 - Gerente\n";
         cout << "3 - Estagiário\n";
-        cout << "0 - Encerrar\n\n";
+
+        if (contador >= 6) {
+            cout << "0 - Encerrar\n";
+        }
         cin >> escolha;
 
-        if (escolha == 0) {
+        if (escolha == 0 && contador >= 6) {
             break;
+
+        } else if (escolha == 0 && contador < 6) {
+            cout << "Você precisa cadastrar pelo menos 6 funcionários antes de encerrar.\n";
+            continue;
         }
 
         int id;
@@ -32,9 +40,9 @@ int main() {
         cin >> id;
 
         cout << "Nome: ";
-        cin.ignore(); 
+        cin.ignore();
         getline(cin, nome);
-        
+
         cout << "Salario Base: ";
         cin >> salarioBase;
 
